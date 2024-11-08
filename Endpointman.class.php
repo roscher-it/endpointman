@@ -981,40 +981,40 @@ echo 'TFTP Server check failed on last past. Skipping';
      * Final Output will look something similar to this
      *  Array
      *       (
-     *            [config_files_override] =>
-     *            [global_user_cfg_data] => N;
-     *            [model_id] => 213
-     *            [brand_id] => 2
-     *            [name] => Grandstream
-     *            [directory] => grandstream
-     *            [model] => GXP2000
-     *            [mac] => 000B820D0050
-     *            [template_id] => 0
-     *            [global_custom_cfg_data] => Serialized Data (Changed Template Values)
-     *            [long_name] => GXP Enterprise IP series [280,1200,2000,2010,2020]
-     *            [product_id] => 21
-     *            [cfg_dir] => gxp
-     *            [cfg_ver] => 1.5
-     *            [template_data] => Serialized Data (The default Template Values)
-     *            [enabled] => 1
-     *            [line] => Array
+     *            ['config_files_override'] =>
+     *            ['global_user_cfg_data'] => N;
+     *            ['model_id'] => 213
+     *            ['brand_id'] => 2
+     *            ['name'] => Grandstream
+     *            ['directory'] => grandstream
+     *            ['model'] => GXP2000
+     *            ['mac'] => 000B820D0050
+     *            ['template_id'] => 0
+     *            ['global_custom_cfg_data'] => Serialized Data (Changed Template Values)
+     *            ['long_name'] => GXP Enterprise IP series [280,1200,2000,2010,2020]
+     *            ['product_id'] => 21
+     *            ['cfg_dir'] => gxp
+     *            ['cfg_ver'] => 1.5
+     *            ['template_data'] => Serialized Data (The default Template Values)
+     *            ['enabled'] => 1
+     *            ['line'] => Array
      *                (
      *                    [1] => Array
      *                        (
-     *                            [luid] => 2
-     *                            [mac_id] => 2
-     *                            [line] => 1
-     *                            [ext] => 1000
-     *                            [description] => Description
-     *                            [custom_cfg_data] =>
-     *                            [user_cfg_data] =>
-     *                            [secret] => secret
-     *                            [id] => 1000
-     *                            [tech] => sip
-     *                            [dial] => SIP/1000
-     *                            [devicetype] => fixed
-     *                            [user] => 1000
-     *                            [emergency_cid] =>
+     *                            ['luid'] => 2
+     *                            ['mac_id'] => 2
+     *                            ['line'] => 1
+     *                            ['ext'] => 1000
+     *                            ['description'] => Description
+     *                            ['custom_cfg_data'] =>
+     *                            ['user_cfg_data'] =>
+     *                            ['secret'] => secret
+     *                            ['id'] => 1000
+     *                            ['tech'] => sip
+     *                            ['dial'] => SIP/1000
+     *                            ['devicetype'] => fixed
+     *                            ['user'] => 1000
+     *                            ['emergency_cid'] =>
      *                        )
      *                )
      *         )
@@ -2059,9 +2059,9 @@ $this->error['parse_configs'] = "File not written to hard drive!";
         while ($i < count($config_files)) {
             $config_files[$i] = str_replace(".", "_", $config_files[$i]);
 
-            if (isset($variables[config_files][$i])) {
+            if (isset($variables['config_files'][$i])) {
 
-                $variables[$config_files[$i]] = explode("_", $variables[config_files][$i], 2);
+                $variables[$config_files[$i]] = explode("_", $variables['config_files'][$i], 2);
 
                 $variables[$config_files[$i]] = $variables[$config_files[$i]][0];
                 if ($variables[$config_files[$i]] > 0) {
